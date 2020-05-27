@@ -13,13 +13,5 @@ $ docker run -p 8080:8080 mynginximage
 $ # browse to http://localhost:8080
 ```
 
-You can also build and deploy the application on OpenShift, assuming you have a
-working `oc` command line environment connected to your cluster already:
 
-`$ oc new-app centos/nginx-112-centos7~https://github.com/sclorg/nginx-ex`
-
-`$ oc new-app centos/nginx-112-centos7~https://github.com/lscalabrini/nginx-ex.git`
-
-You can also deploy the sample template for the application:
-
-`$ oc new-app -f https://raw.githubusercontent.com/sclorg/nginx-ex/master/openshift/templates/nginx.json`
+`$ oc new-app -name test-app centos/nginx-112-centos7~https://github.com/lscalabrini/nginx-ex.git`
